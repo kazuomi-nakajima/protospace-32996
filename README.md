@@ -21,15 +21,17 @@ has_many :comments
 
 |  Column    |   Type     |  Options         |
 |  ------    |  ------    |  -------         |
-| title      | strin      | not null         |
+| title      | string     | not null         |
 | catch_copy | text       | not null         |
 | concept    | text       | not null         |
+
 | image      | ActiveStorageで実装            |
 | user       | references | foreign_key: true|
 
 ### Association
 belongs_to :user
 has_many :comments
+has_one_attached :image
 
 
 
