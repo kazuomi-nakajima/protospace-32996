@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   #テーブル関係
   has_many :prototypes
-  # has_many :comments
+  has_many :comments
 
   #データが空の場合NG
   validates :name, presence: true
