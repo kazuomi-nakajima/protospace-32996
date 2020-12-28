@@ -38,6 +38,7 @@ class PrototypesController < ApplicationController
   end
 
   def destroy
+    # binding.pry
     prototype = Prototype.find(params[:id])
     prototype.destroy
     redirect_to root_path

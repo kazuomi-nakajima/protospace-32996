@@ -1,7 +1,7 @@
 class Prototype < ApplicationRecord
   #テーブル関係
   belongs_to :user
-  has_many :comments
+  has_many :comments, dependent: :destroy
   has_one_attached :image
   
   #データが空の場合NG
